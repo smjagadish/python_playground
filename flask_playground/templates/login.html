@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% block title %}
+Login Page
+{% endblock %}
+
+{% block header1 %}
+Login to flask app
+{% endblock %}
+
+{% block par %}
+contact support if login fails
+{% endblock %}
+
+{% block anchor %}
+<div class ="main_wrapper">
+     <form method="POST" action="">
+         {{ form.hidden_tag() }}
+         <table>
+             <tr>
+                 <td>email</td>
+                 <td>{{form.email}}</td>
+             </tr>
+             <tr>
+                 <td>password</td>
+                 <td>{{form.password}}</td>
+             </tr>
+
+
+                 <tr>
+                  <td> remember</td>
+                     <td>{{form.remember_me}}</td>
+                 </tr>
+             <tr>
+                 <td></td>
+                 <td><button type="submit">Sign in</button></td>
+             </tr>
+         </table>
+     </form>
+</div>
+<div>
+  <a href="{{url_for('register')}}"> do not have an account ? </a>
+</div>
+
+{% endblock %}
+

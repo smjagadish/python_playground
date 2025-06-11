@@ -1,0 +1,34 @@
+########################################################
+This text file is documenting the use of the shape_area module.
+The documentation in this file will detail the purpose of the functions in the module and have tests embedded.
+The file is rendered using a script so that validation of the embedded tests is possible.
+document generation can be done using sphinx, custom script or pydoc-markdown.
+########################################################
+
+########################################################
+The shape_area module provides helper functions to calculate area of shapes.
+The supported shapes include triangle, rectangle and square
+
+>>> import shape_area_module
+
+##########################################################
+
+##########################################################
+Area of triangle is calculated using height and breadth.
+user passes both the metrics and function computes area.
+result is returned as a float.
+
+>>> shape_area_module.triangle(3,4)
+6.0
+
+###########################################################
+Area of a quadrilateral will raise an exception.
+We use ellipsis to handle/manage the dynamic parts of the raised exception
+
+>>> shape_area_module.quadrilateral()
+Traceback (most recent call last):
+...
+Exception: undefined shape
+
+###########################################################
+

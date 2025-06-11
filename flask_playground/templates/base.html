@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %} {% endblock %}</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="../static/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../static/icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<header>
+  <h1>{% block header1 %} {% endblock %}</h1>
+</header>
+<p>
+  {%block par %}
+  Stock template if no override
+  {% endblock %}
+</p>
+{% block anchor %}
+
+{% endblock %}
+<div class ="main container">
+  <article class = "flashes">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+         <ul>
+         {% for message in messages %}
+             <li> {{ message }}</li>
+         {% endfor %}
+         </ul>
+      {% endif %}
+    {% endwith %}
+  </article>
+  {% block sidebar %}
+  <aside>
+    <h3> working hours</h3>
+    <p> mon-fri: 10 am - 9 pm</p>
+    <p> sat: 9 am - 3 pm</p>
+    {% if new_feedback %}
+    <ul>
+      {% for li in new_feedback %}
+      <li>{{li.url}}</li>
+      <li>{{li.user}}</li>
+      <li>{{li.date}}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    No feedback
+    {% endif %}
+  </aside>
+  {% endblock %}
+</div>
+</body>
+
+</html>

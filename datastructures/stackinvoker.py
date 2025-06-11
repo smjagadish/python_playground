@@ -1,0 +1,16 @@
+from stack_helper import stackhelper
+if __name__ == '__main__':
+    obj = stackhelper()
+    obj.pushElement(100)
+    obj.pushElement(200)
+    obj.pushElement(300)
+    obj.pushElement(400)
+    obj.peekElement()
+    obj.popElement()
+    obj.popElement()
+    obj.popElement()
+    obj.popElement()
+    #obj.popElement()
+    obj.pushElement(500)
+    obj.pushElement(600)
+    obj.peekElement()

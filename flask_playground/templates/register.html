@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% block title %}
+Registration Page
+{% endblock %}
+
+{% block header1 %}
+Registering new users - flask app
+{% endblock %}
+
+{% block par %}
+contact support if registration fails
+{% endblock %}
+
+{% block anchor %}
+<div class ="main_wrapper">
+     <form method="POST" action="">
+         {{ form.hidden_tag() }}
+         <table>
+             <tr>
+                 <td>username</td>
+                 <td>{{form.username}}</td>
+             </tr>
+             <tr>
+                 <td>email</td>
+                 <td>{{form.email}}</td>
+             </tr>
+             <tr>
+                 <td>password</td>
+                 <td>{{form.password}}</td>
+
+             </tr>
+
+                 <tr>
+                  <td> confirm password</td>
+                     <td>{{form.confirm_password}}</td>
+                 </tr>
+             <tr>
+                 <td></td>
+                 <td><button type="submit">Register</button></td>
+             </tr>
+         </table>
+     </form>
+</div>
+
+{% endblock %}
+

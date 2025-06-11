@@ -1,0 +1,16 @@
+beautifulsoup4~=4.13.0
+setuptools~=68.2.0
+path~=17.1.0
+pytz~=2025.1
+python-dateutil~=2.9.0.post0
+ijson~=3.3.0
+numpy~=2.2.4
+pillow~=11.2.1
+requests~=2.32.3
+urllib3~=2.3.0
+pydantic~=2.11.4
+WTForms~=3.2.1
+Flask~=3.1.1
+Flask-Login~=0.6.3
+Flask-Bcrypt~=1.0.1
+pytest~=8.3.5

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}
+HTML5 with Python
+{% endblock %}
+
+{% block header1 %}
+HTML5 barebones with python - flask
+{% endblock %}
+
+{% block par %}
+this is an experimentation project
+{% endblock %}
+
+{% block anchor %}
+{% if current_user.is_authenticated %}
+<a href = "{{ url_for('logout') }}">logout</a>
+<a href="{{ url_for('add_feedback') }}">Add feedback</a>
+{% else %}
+<a href ="{{ url_for('register') }}">Register</a>
+<a href ="{{ url_for('login') }}">login</a>
+{% endif %}
+{% endblock %}
+
+
