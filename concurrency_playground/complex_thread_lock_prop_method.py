@@ -16,5 +16,5 @@ class complex_task:
           self._value = val
 
     def set_val(obj,val):
-        print(f' thread currently executing is {threading.current_thread().native_id}')
+        print(f' thread currently executing is {threading.current_thread().name}')
         obj._value = val
