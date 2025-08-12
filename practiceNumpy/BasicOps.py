@@ -12,6 +12,8 @@ def doJob():
     print(arr)
     lst = [1,2,3]
     print(np.expand_dims(arr,0)) # convert scalar to 1-d array
+    print(np.expand_dims(lst, 1)) # convert 1d array to 2-d array
+
     print(arr.reshape(-1)) # also a way to convert scalar to 1-d array
     print(arr[np.newaxis]) # also a wayto convert scalar to 1-d array
     lst_arr = np.array(lst)

@@ -32,6 +32,13 @@ class singleton_with_dec:
     '''
     consider overriding copy and deepcopy to avoid the singleton pattern to break
     '''
+    def __copy__(self):
+        return self
+
+    def __deepcopy__(self, memodict=None):
+        if memodict is None:
+            memodict = {}
+        return self
 
 
 
